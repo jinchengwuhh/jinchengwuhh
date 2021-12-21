@@ -1,0 +1,44 @@
+
+page{
+	width: 100%;
+	height: 100%;
+	background-color: #f2f2f2;
+}
+.top{
+	height: 200rpx;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #007AFF80;
+}
+.pic{
+	padding-left: 30rpx;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.mytab{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 100rpx;
+	background-color: #FFFFFF;
+	margin-top: 10rpx;
+}
+.mytab .leftcont {
+	padding-left: 30rpx;
+}
+.mytab .leftcont image{
+	vertical-align: middle;
+}
+.mytab text {
+	padding-left: 10rpx;
+	font-size: 34rpx;
+	vertical-align: middle;
+}
+.mytab image {
+	width: 50rpx;
+	height: 50rpx;
+}
+

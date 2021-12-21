@@ -72,12 +72,11 @@ import { mapMutations } from 'vuex';
 							}
 						}), */
 						uni.getUserProfile({
-							provider: 'weixin',
+							desc: 'Weixin',
 							success: (infoRes) => {
 									this.nickName = infoRes.userInfo.nickName
 										this.gender = infoRes.userInfo.gender
 										this.avatarUrl =  infoRes.userInfo.avatarUrl
-										console.log("==========",this.nickName)
 										/* switchTab向页面传递参数 使用 setStorage存储*/
 									uni.setStorage({
 										key: 'pagePara',

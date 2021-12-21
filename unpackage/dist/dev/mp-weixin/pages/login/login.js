@@ -204,12 +204,11 @@ var _vuex = __webpack_require__(/*! vuex */ 141);function ownKeys(object, enumer
                            							}
                            						}), */
             uni.getUserProfile({
-              provider: 'weixin',
+              desc: 'Weixin',
               success: function success(infoRes) {
                 _this.nickName = infoRes.userInfo.nickName;
                 _this.gender = infoRes.userInfo.gender;
                 _this.avatarUrl = infoRes.userInfo.avatarUrl;
-                console.log("==========", _this.nickName);
                 /* switchTab向页面传递参数 使用 setStorage存储*/
                 uni.setStorage({
                   key: 'pagePara',

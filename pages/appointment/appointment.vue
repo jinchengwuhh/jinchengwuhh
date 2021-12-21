@@ -9,7 +9,7 @@
 				<text>{{ item }}</text>
 			</view>
 			<view class="appbtn">
-				<button type="" plain="true">预约</button>
+				<button type="primary" size="mini" @tap="jump">预约</button>
 			</view>
 		</view>
 	</view>
@@ -30,7 +30,11 @@
 			}
 		},
 		methods: {
-			
+			jump() {
+				uni.navigateTo({
+					url: './appointment_detail'
+				})
+			}
 		}
 	}
 </script>
@@ -52,9 +56,11 @@
 	.labname {
 		padding-left: 20rpx;
 	}
+	.lab .appbtn {
+		padding-right: 20rpx;
+	}
 	.lab .appbtn button{
 		border: none;
-		font-size: 34rpx;
 	}
 	.searchlab {
 	}

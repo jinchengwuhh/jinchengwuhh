@@ -3,7 +3,8 @@
     "pages/login/login",
     "pages/index/index",
     "pages/appointment/appointment",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/appointment/appointment_detail"
   ],
   "subPackages": [],
   "window": {

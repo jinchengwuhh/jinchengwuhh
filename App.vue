@@ -18,4 +18,9 @@
     /*每个页面公共css */
 	 /* 引入 uview 基础样式 */
 	@import "uview-ui/index.scss";
+	page{
+		width: 100%;
+		height: 100%;
+		background-color: #f2f2f2;
+	}
 </style>

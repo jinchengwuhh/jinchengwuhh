@@ -39,6 +39,15 @@
 
 		}
 
+        ,{
+            "path" : "pages/appointment/appointment_detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"tabBar": {
 		"color": "#707070",

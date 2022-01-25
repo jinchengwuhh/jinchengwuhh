@@ -1,0 +1,19 @@
+
+.info {
+	display: flex;
+	flex-direction: row;
+	background-color: #FFFFFF;
+	color: #9c9c9c;
+	font-size: 34rpx;
+}
+.infomsg {
+	padding: 30rpx 20rpx;
+}
+.infothing {
+	padding: 30rpx 0;
+}
+.cancelbtn {
+	padding-top: 30rpx;
+	padding-left: 260rpx;
+}
+

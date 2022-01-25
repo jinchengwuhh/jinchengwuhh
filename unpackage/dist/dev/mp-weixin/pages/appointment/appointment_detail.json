@@ -2,7 +2,6 @@
   "navigationBarTitleText": "",
   "enablePullDownRefresh": false,
   "usingComponents": {
-    "u-datetime-picker": "/uview-ui/components/u-datetime-picker/u-datetime-picker",
-    "u-button": "/uview-ui/components/u-button/u-button"
+    "u-datetime-picker": "/uview-ui/components/u-datetime-picker/u-datetime-picker"
   }
 }

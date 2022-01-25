@@ -1,5 +1,5 @@
 
-.top{
+.top {
 	height: 200rpx;
 	display: flex;
 	flex-direction: row;
@@ -7,24 +7,24 @@
 	align-items: center;
 	background-color: #007AFF80;
 }
-.pic{
+.pic {
 	padding-left: 30rpx;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 }
-.mytab{
+.mytab {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	height: 100rpx;
 	background-color: #FFFFFF;
-	margin-top: 10rpx;
+	margin-top: 5rpx;
 }
 .mytab .leftcont {
 	padding-left: 30rpx;
 }
-.mytab .leftcont image{
+.mytab .leftcont image {
 	vertical-align: middle;
 }
 .mytab text {

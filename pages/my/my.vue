@@ -9,7 +9,7 @@
 			</view>
 		</view>
 		<!-- 我的预约 -->
-		<view class="mytab">
+		<view class="mytab" @tap="jumpToMyAppointment">
 			<view class="leftcont">
 				<image src="../../static/my/myappoint.png" mode=""></image>
 				<text>我的预约</text>
@@ -19,7 +19,7 @@
 			</view>
 		</view>
 		<!-- 用户信息 -->
-		<view class="mytab">
+		<view class="mytab" @tap="jumpToInformation">
 			<view class="leftcont">
 				<image src="../../static/my/mymsg.png" mode=""></image>
 				<text>用户信息</text>
@@ -42,7 +42,9 @@
 </template>
 
 <script>
-	import { mapMutations } from 'vuex';//封装在index.js中的退出登录方法，还没用到
+	import {
+		mapMutations
+	} from 'vuex'; //封装在index.js中的退出登录方法，还没用到
 	export default {
 		data() {
 			return {
@@ -50,43 +52,53 @@
 				sex: '',
 				avatarUrl: "",
 				Info: {},
-				
+
 			}
 		},
 		created() {
-			
+
 		},
 		onLoad() {
 			this.getStorage()
 		},
 		methods: {
 			...mapMutations(['logout']),
-			getStorage(){
-								uni.getStorage({
-								    key: 'pagePara',
-								    success: (res) =>{
-								        this.Info = res.data
-										this.username = this.Info.nickName
-										this.sex = this.Info.gender
-										this.avatarUrl = this.Info.avatarUrl  //头像
-								    }
-								    });
-							},
-							/* 退出登录 */
-							exitLogin(){
-								
-							            uni.removeStorageSync('token');
-							            uni.removeStorageSync('user');
-							            uni.reLaunch({
-							                url:"/pages/login/login"
-							            })
-							        },
+			getStorage() {
+				uni.getStorage({
+					key: 'pagePara',
+					success: (res) => {
+						this.Info = res.data
+						this.username = this.Info.nickName
+						this.sex = this.Info.gender
+						this.avatarUrl = this.Info.avatarUrl //头像
+					}
+				});
+			},
+			/* 退出登录 */
+			exitLogin() {
+
+				uni.removeStorageSync('token');
+				uni.removeStorageSync('user');
+				uni.reLaunch({
+					url: "/pages/login/login"
+				})
+			},
+			jumpToMyAppointment() {
+				uni.navigateTo({
+					url: '../appointment/myappointment'
+				})
+			},
+			jumpToInformation() {
+				uni.navigateTo({
+					url: './infomation'
+				})
+			}
 		}
 	}
 </script>
 
 <style>
-	.top{
+	.top {
 		height: 200rpx;
 		display: flex;
 		flex-direction: row;
@@ -94,31 +106,37 @@
 		align-items: center;
 		background-color: #007AFF80;
 	}
-	.pic{
+
+	.pic {
 		padding-left: 30rpx;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 	}
-	.mytab{
+
+	.mytab {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		height: 100rpx;
 		background-color: #FFFFFF;
-		margin-top: 10rpx;
+		margin-top: 5rpx;
 	}
+
 	.mytab .leftcont {
 		padding-left: 30rpx;
 	}
-	.mytab .leftcont image{
+
+	.mytab .leftcont image {
 		vertical-align: middle;
 	}
+
 	.mytab text {
 		padding-left: 10rpx;
 		font-size: 34rpx;
 		vertical-align: middle;
 	}
+
 	.mytab image {
 		width: 50rpx;
 		height: 50rpx;

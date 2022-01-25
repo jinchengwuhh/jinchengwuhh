@@ -1,26 +1,29 @@
 <template>
 	<view class="content">
-		<view class="title">
-			<p>登录</p>
+		<view class="bigbox">
+			<view class="title">
+				<p>登录</p>
+			</view>
+			<view class="">
+				<view class="idstyle">
+					<p>账号</p>
+					<input type="text" value="" v-model="items.username" class="username" />
+				</view>
+				<view class="idstyle">
+					<p>密码</p>
+					<input type="text" value="" v-model="items.password" class="username" />
+				</view>
+			
+			</view>
+			<view class="">
+				<button type="primary" class="login" @click="submit(items)">登录</button>
+			</view>
+			<view class="">
+				<image style="width: 70rpx; height: 70rpx;" src="../../static/weixin.png"  @click.stop="getuserinfo()"></image>
+				<!-- <button type="default" open-type="getUserInfo" @getuserinfo="getuserinfo()">获取用户信息</button> -->
+			</view>
 		</view>
-		<view class="">
-			<view class="idstyle">
-				<p>账号</p>
-				<input type="text" value="" v-model="items.id" class="username" />
-			</view>
-			<view class="idstyle">
-				<p>密码</p>
-				<input type="text" value="" v-model="items.password" class="username" />
-			</view>
 
-		</view>
-		<view class="">
-			<button type="primary" class="login" @click="submit(items)">登录</button>
-		</view>
-		<view class="">
-			<image style="width: 70rpx; height: 70rpx;" src="../../static/weixin.png"  @click.stop="getuserinfo()"></image>
-			<!-- <button type="default" open-type="getUserInfo" @getuserinfo="getuserinfo()">获取用户信息</button> -->
-		</view>
 	</view>
 </template>
 
@@ -35,7 +38,7 @@ import { mapMutations } from 'vuex';
 					province:'',
 					city:''		,		
 				items:{
-					id: '',
+					username: '',
 					password: '',
 				},
 			}
@@ -43,9 +46,9 @@ import { mapMutations } from 'vuex';
 		methods: {
 			...mapMutations(['login']),
 			submit(items) {
-				this.id = items.id,
+				this.username = items.username,
 				this.password = items.password
-				if(this.id != '' && this.password != ''){
+				if(this.username != '' && this.password != ''){
 					uni.switchTab({
 						url: '../index/index?id='+this.id + '&password='+this.password//不能有多余空格
 					})
@@ -104,23 +107,27 @@ import { mapMutations } from 'vuex';
 	}
 </script>
 
-<style scoped>
+<style>
+
 .title{
         font-weight: bold;
         margin: 10rpx 0 40rpx 0;
         font-size: 44rpx;
         color: black;
     }
+	.title p{
+		padding-top: 20rpx;
+	}
     .username{
         height: 80rpx;
-		margin: 20rpx auto;
+		margin: 20rpx 20rpx;
         /* margin:10rpx 0 40rpx 0; */
         width: 450rpx;
         border-radius: 10rpx;
-        border: #007aff 2rpx solid;
-        background-color: rgba(200, 199, 204, 0.36);
+      //  border: #ffffff 2rpx solid;
+        background-color: #ffffff;
     }
-    .content {
+    .content {		
         background-size: 100% 100%;
         padding: 50rpx;
         margin: 0 auto;
@@ -132,7 +139,7 @@ import { mapMutations } from 'vuex';
 		flex-direction: row;
 	}
 	.idstyle p{
-		margin: 20rpx 10rpx;
+		margin: 20rpx 30rpx;
 		line-height: 2;
 	}
     .login{
@@ -140,4 +147,10 @@ import { mapMutations } from 'vuex';
         margin-top: 150rpx;
         color: black;
     }
+	.bigbox{
+		background-color: rgba(242,242,242,0.8);
+		/* background-color: rgba(162,181,205,0.4); */
+		text-align: center;
+		border-radius: 20rpx;
+	}
 </style>

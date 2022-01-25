@@ -4,7 +4,9 @@
     "pages/index/index",
     "pages/appointment/appointment",
     "pages/my/my",
-    "pages/appointment/appointment_detail"
+    "pages/appointment/appointment_detail",
+    "pages/appointment/myappointment",
+    "pages/my/infomation"
   ],
   "subPackages": [],
   "window": {
@@ -24,12 +26,6 @@
         "text": "首页",
         "iconPath": "static/normal_index.png",
         "selectedIconPath": "static/index.png"
-      },
-      {
-        "pagePath": "pages/appointment/appointment",
-        "text": "预约",
-        "iconPath": "static/normal_appointment.png",
-        "selectedIconPath": "static/appointment.png"
       },
       {
         "pagePath": "pages/my/my",

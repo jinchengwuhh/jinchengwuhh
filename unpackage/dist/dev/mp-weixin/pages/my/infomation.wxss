@@ -1,0 +1,18 @@
+
+.infomation {
+	display: flex;
+	flex-direction: row;
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #f2f2f2;
+}
+.formmsg {
+	padding: 30rpx 20rpx;
+}
+.formmsg::before {
+	content: '*';
+	color: #DD524D;
+}
+.forminfo {
+	padding: 30rpx 0;
+}
+

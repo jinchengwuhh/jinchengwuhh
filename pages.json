@@ -48,6 +48,24 @@
             }
             
         }
+        ,{
+            "path" : "pages/appointment/myappointment",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/my/infomation",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"tabBar": {
 		"color": "#707070",
@@ -61,12 +79,12 @@
 				 "iconPath":"static/normal_index.png",
 				"selectedIconPath":"static/index.png"
 			},
-			{
+/* 			{
 				"pagePath": "pages/appointment/appointment",
 				"text": "预约",
 				 "iconPath":"static/normal_appointment.png",
 				"selectedIconPath":"static/appointment.png"
-			},
+			}, */
 			{
 				"pagePath": "pages/my/my",
 				"text": "我的",

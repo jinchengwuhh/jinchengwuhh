@@ -1,1 +1,24 @@
-/* pages/appointment/appointment_detail.wxss */
+
+.choosetime {
+	display: flex;
+	flex-direction: row;
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #f2f2f2;
+}
+.formmsg {
+	padding: 30rpx 20rpx;
+}
+.formmsg::before{
+	content: '*';
+	color: #DD524D;
+}
+.formtime {
+	padding: 30rpx 0;
+}
+.loading {
+	margin-top: 80%;
+}
+textarea {
+	width: 422rpx;
+}
+

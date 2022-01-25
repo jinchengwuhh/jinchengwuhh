@@ -2,7 +2,7 @@
 	<view class="content">
 		<!-- 图片 -->
 		<view class="labpic">
-			<image style="height: 280rpx; overflow: hidden;" src="../../static/index/yifulou.jpg" mode=""></image>
+			<image style="width: 100%;height: 280rpx; overflow: hidden;" src="../../static/index/yifulou.jpg" mode=""></image>
 		</view>
 		<!-- 消息 -->
 		<view class="msg">
@@ -15,7 +15,7 @@
 		</view>
 		<!-- 预约 -->
 		<view class="div1">
-			<view class="appointmentlab">
+			<view class="appointmentlab" @tap="jumpTo">
 				<view class="iconappoint">
 					<image src="../../static/index/index_appointment.png" mode=""></image>
 				</view>
@@ -23,7 +23,7 @@
 					<text>预约实验室</text>
 				</view>
 			</view>
-			<view class="appointmentlab">
+			<view class="appointmentlab" @tap="jumpTomy">
 				<view class="iconappoint">
 					<image src="../../static/index/appointed.png" mode=""></image>
 				</view>
@@ -69,7 +69,16 @@
 			this.password = options.password
 		},
         methods: {
-
+			jumpTo() {
+				uni.navigateTo({
+					url: '../appointment/appointment'
+				})
+			},
+			jumpTomy() {
+				uni.navigateTo({
+					url: '../appointment/myappointment'
+				})
+			}
         }
     }
 </script>
